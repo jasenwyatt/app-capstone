@@ -30,7 +30,13 @@ export default class Specials extends Component {
                     <p className="mt-2 max-w-lg text-pretty text-4xl font-medium font-serif tracking-tight text-gray-950 sm:text-5xl">Check out our specials!</p>
                     <div className="mt-5 grid grid-cols-1 gap-4 sm:mt-8 lg:grid-cols-6 lg:grid-rows-1">
                         {specialsData.map((special, index) => (
-                            <SpecialBox label={special.label} headline={special.headline} price={special.price} image={special.image} />
+                            <SpecialBox 
+                                key={index}
+                                label={special.label} 
+                                headline={special.headline} 
+                                price={special.price} 
+                                image={special.image} 
+                            />
                         ))}
                     </div>
                 </div>
