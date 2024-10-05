@@ -5,7 +5,7 @@ export default class OurStory extends Component {
     return (
         <section className="mx-auto max-w-7xl px-6 lg:px-8 py-8 lg:py-12">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <p className="text-base font-semibold leading-7 text-indigo-600">About</p>
+                <p className="text-base font-semibold leading-7 text-forest-600">About</p>
                 <h1 className="mt-2 text-pretty text-4xl font-semibold font-serif tracking-tight text-gray-900 sm:text-5xl">The Little Lemon Story</h1>
                 <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
                     <div>
@@ -18,7 +18,7 @@ export default class OurStory extends Component {
                     </div>
                 </div>
                 <div className="mt-10 flex">
-                    <a href="/about" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Learn more</a>
+                    <a href="/about" className="rounded-md bg-forest-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-forest-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-600">Learn more</a>
                 </div>
             </div>
         </section>

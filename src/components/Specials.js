@@ -31,7 +31,7 @@ export default class Specials extends Component {
         return (
             <section className="bg-white py-8 sm:py-10">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-                    <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Specials</h2>
+                    <h2 className="text-lg font-semibold leading-8 tracking-tight text-forest-600">Specials</h2>
                     <p className="mt-2 max-w-lg text-pretty text-4xl font-semibold font-serif tracking-tight text-gray-950 sm:text-5xl">Check out our fresh deals</p>
                     <div className="mt-5 grid grid-cols-1 gap-4 sm:mt-8 lg:grid-cols-6 lg:grid-rows-1">
                         {specialsData.map((special, index) => (
