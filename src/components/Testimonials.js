@@ -19,21 +19,21 @@ const testimonialsData = [
     {
         "stars": 4,
         "name": "Jonathon Ayers",
-        "handle": "@jayers",
+        "handle": "@jonayers",
         "quote": "Cras dignissim condimentum odio vitae fringilla. Quisque tortor velit, semper fringilla nisl non, posuere vulputate nisl.",
         "image": "https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?q=80&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {
         "stars": 5,
-        "name": "Some Name",
-        "handle": "@someone",
+        "name": "Bradley Smith",
+        "handle": "@bradsmith",
         "quote": "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
         "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {
         "stars": 5,
-        "name": "Some Name",
-        "handle": "@someone",
+        "name": "Jean Williams",
+        "handle": "@jeanw",
         "quote": "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
         "image": "https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?q=80&w=1470&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
@@ -53,7 +53,7 @@ export default class Testimonials extends Component {
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-xl text-center">
                     <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonials</h2>
-                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">We have worked with thousands of amazing people</p>
+                    <p class="mt-2 text-4xl font-semibold font-serif tracking-tight text-gray-900 sm:text-5xl">What our guests are raving about</p>
                 </div>
                 <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
                     <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
