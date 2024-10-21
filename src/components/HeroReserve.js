@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useOutletContext } from 'react-router-dom'
 import BookingForm from './BookingForm'
 
-export default class HeroReserve extends Component {
-  render() {
+export default function HeroReserve() {
+    const { availableTimes, setAvailableTimes } = useOutletContext();
+
     return (
         <section className="relative isolate overflow-hidden bg-gradient-to-b from-sand-500/20 pt-14">
             <div className="mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-8">
@@ -15,11 +17,10 @@ export default class HeroReserve extends Component {
                         <p className="text-lg leading-8 text-gray-600">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                     </div>
                     <div className="mt-10 w-full max-w-lg rounded-2xl sm:mt-8 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-18 bg-white shadow-lg p-8">
-                        <BookingForm />
+                        <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} />
                     </div>
                 </div>
             </div>
         </section>
     )
-  }
 }
