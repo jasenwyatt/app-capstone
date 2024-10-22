@@ -1,19 +1,29 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
 import HomePage from './HomePage'
 import ReservePage from './ReservePage'
+import { fetchAPI } from '../mockAPI'  // Import the mock function
 
 export default function Main() {
   function updateTimes(state, action) {
-    // For now, return the same available times regardless of the date
-    return state;
-  }
-  
-  function initializeTimes() {
-    return ["16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    switch (action.type) {
+      case 'SET_TIMES':
+        return action.payload;
+      default:
+        return state;
+    }
   }
 
-  const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, null, initializeTimes);
+  const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, []);
+
+  async function fetchTimes(date) {
+    const times = await fetchAPI(new Date(date));
+    dispatchAvailableTimes({ type: 'SET_TIMES', payload: times });
+  }
+
+  useEffect(() => {
+    fetchTimes(new Date());
+  }, []);
 
   return (
     <main>
@@ -21,7 +31,7 @@ export default function Main() {
         <Route path="/" element={<HomePage />} />
         <Route 
           path="/reservations" 
-          element={<Outlet context={{ availableTimes, dispatchAvailableTimes }} />}
+          element={<Outlet context={{ availableTimes, dispatchAvailableTimes, fetchTimes }} />}
         >
           <Route index element={<ReservePage />} />
         </Route>

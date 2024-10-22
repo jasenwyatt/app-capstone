@@ -3,11 +3,15 @@ import { useOutletContext } from 'react-router-dom'
 import HeroReserve from './HeroReserve'
 
 export default function ReservePage()  {
-  const { availableTimes, setAvailableTimes } = useOutletContext();
+  const { availableTimes, dispatchAvailableTimes, fetchAPI } = useOutletContext();
 
   return (
     <>
-      <HeroReserve availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} />
+      <HeroReserve 
+        availableTimes={availableTimes} 
+        dispatchAvailableTimes={dispatchAvailableTimes} 
+        fetchAPI={fetchAPI} 
+      />
     </>
   )
 }

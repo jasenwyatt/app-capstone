@@ -2,12 +2,14 @@ import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 
 function BookingForm() {
-  const { availableTimes, dispatchAvailableTimes } = useOutletContext();
+  const { availableTimes, fetchTimes } = useOutletContext();
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
-    dispatchAvailableTimes({ type: 'UPDATE_TIMES', payload: selectedDate });
     setDate(selectedDate);
+    
+    // Fetch new times for the selected date
+    fetchTimes(selectedDate);
   };
 
   const [formDate, setDate] = React.useState("");
