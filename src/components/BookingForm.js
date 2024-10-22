@@ -4,6 +4,9 @@ import { useOutletContext } from 'react-router-dom';
 function BookingForm() {
   const { availableTimes, fetchTimes } = useOutletContext();
 
+  // Get today's date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];
+
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
@@ -12,7 +15,7 @@ function BookingForm() {
     fetchTimes(selectedDate);
   };
 
-  const [formDate, setDate] = React.useState("");
+  const [formDate, setDate] = React.useState(today);
   const [formTime, setTime] = React.useState("");
   const [formGuests, setGuests] = React.useState("");
   const [formOccasion, setOccasion] = React.useState("");
@@ -26,6 +29,7 @@ function BookingForm() {
         type="date"
         value={formDate}
         onChange={handleDateChange}
+        min={today}
         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-forest-600 sm:text-sm sm:leading-6"
       />
       <label htmlFor="res-time">Choose time</label>
