@@ -10,7 +10,7 @@ function BookingForm() {
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
-    
+
     // Fetch new times for the selected date
     fetchTimes(selectedDate);
   };
