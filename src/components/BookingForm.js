@@ -45,12 +45,14 @@ function BookingForm() {
         value={formDate}
         onChange={handleDateChange}
         min={today}
+        aria-label="Choose date"
         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-forest-600 sm:text-sm sm:leading-6"
       />
       <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time"
         onChange={e => setTime(e.target.value)}
+        aria-label="Choose time"
         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-forest-600 sm:text-sm sm:leading-6"
       >
         {availableTimes.map(time => (
@@ -65,6 +67,7 @@ function BookingForm() {
         min="1"
         max="10"
         onChange={e => setGuests(e.target.value)}
+        aria-label="Enter number of guests"
         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-forest-600 sm:text-sm sm:leading-6"
       />
       <label htmlFor="occasion">Occasion</label>
@@ -72,6 +75,7 @@ function BookingForm() {
         id="occasion"
         defaultValue=""
         onChange={e => setOccasion(e.target.value)}
+        aria-label="Select an occasion"
         className="h-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-forest-600 sm:text-sm sm:leading-6"
       >
         <option value=""></option>
@@ -87,6 +91,7 @@ function BookingForm() {
         }`}
         type="submit"
         value="Submit"
+        aria-label="Submit the form"
         disabled={!isFormValid()}
       />
       <p className="text-sm text-gray-00">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum luctus odio, non sodales augue. Mauris sodales sollicitudin varius. Fusce egestas porta sem, et placerat nibh maximus vel. Donec ipsum mauris, auctor quis sem vel, tempor tincidunt sapien.</p>
